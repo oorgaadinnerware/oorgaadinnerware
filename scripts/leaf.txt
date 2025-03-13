@@ -1,0 +1,54 @@
+$(document).ready(function() {
+	$(".product").on("click", function(){
+		$('html,body').animate({
+        scrollTop: $("#product-navs").offset().top},
+        'slow');
+	});
+
+	$(".whyus").on("click", function(){
+		$('html,body').animate({
+        scrollTop: $("#whyus-navs").offset().top},
+        'slow');
+	});
+
+	$(".features").on("click", function(){
+		$('html,body').animate({
+        scrollTop: $("#features-navs").offset().top},
+        'slow');
+	});
+
+	$(".scope").on("click", function(){
+		$('html,body').animate({
+        scrollTop: $("#scope-navs").offset().top},
+        'slow');
+	});
+
+	$(".impact").on("click", function(){
+		$('html,body').animate({
+        scrollTop: $("#impact-navs").offset().top},
+        'slow');
+	});
+
+	$(".contact").on("click", function(){
+		$('html,body').animate({
+        scrollTop: $("#contact-navs").offset().top},
+        'slow');
+	});
+	$(".hamb-img").on("click", function(){
+		$(".hamb-exp").addClass("mob-nav")
+	});
+	$(".hamb-exp img").on("click", function(){
+		$(".hamb-exp").removeClass("mob-nav")
+	});
+
+	$(".hamb-exp .link-text").on("click", function(){
+		$(".hamb-exp").removeClass("mob-nav")
+	});
+	var leafbodywidth = $(window).width();
+	console.log(leafbodywidth);
+	if (leafbodywidth< 768) {
+		$('body').width(leafbodywidth);
+		$('body').addClass('scroll-prevent');
+
+	}
+});
